@@ -7,10 +7,10 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
+         <style>
             @font-face {
                 font-family: 'Minecraft'; /* Choose a name for your font family */
-                src: url('Minecraft-better.ttf') format('truetype');
+                src: url('minecraft-better.ttf') format('truetype');
             }
 
 
@@ -92,7 +92,6 @@
             
             .flex-container img {
                 padding-top: 1em;
-                padding-bottom: 2em;
                 max-width: 90%; /* Makes image responsive */
                 height: auto; /* Maintains aspect ratio */
             }
@@ -122,7 +121,7 @@
             }
 
             .text {
-                padding-left: 5em;
+                padding: 5em;
             }
 
             main {
@@ -140,6 +139,72 @@
                 text-align: center;
             }
 
+            /* MOBILE media queries*/
+            @media (max-width: 480px){
+                .container {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr  auto  1fr ;
+                    grid-template-areas:
+                    "header"
+                    "countdown"
+                    "main"
+                    "footer";
+                }
+
+                /*on mobile view, the nav bar icon is visible*/
+                .nav-display{
+                    display: inline;
+                }
+                /*on the mobile view, the nav bar links are not shown unless the nav bar icon is toggled*/
+                .links{
+                    display:none;
+                }
+
+
+                h1 {
+                    font-size: 1.6em;
+                }
+
+                h2 {
+                    font-size: 1em;
+                }
+
+                h3 {
+                    font-size: 1em;
+                }
+
+                p{
+                    font-size: 1em;
+                    text-align: center;
+                }
+
+                main{
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                header {
+                    padding: 10px;
+                    position: sticky;
+                    top: 0;
+                }
+               
+                .flex-container img {
+                    width: min-content; /* Makes image responsive */
+                    height: auto; /* Maintains aspect ratio */
+                        
+                }
+                countdown{
+                grid-area: countdown;
+                color: white;
+                position: sticky;
+                background-color:  #b02e26;;
+                top: 6.9em;
+                
+                }
+            
+            }
         </style>
     </head>
 
