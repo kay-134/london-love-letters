@@ -58,6 +58,8 @@
                 margin-left: auto;
                 margin-right: auto;
                 justify-content: center;
+                max-width: 100%;
+                height: auto;
             }
 
 
@@ -87,7 +89,7 @@
                
                 flex: 1; /* Distributes space evenly */
                 max-width: 800px;
-                min-width: 300px; /* Prevents content from shrinking too much */
+                min-width: 200px; /* Prevents content from shrinking too much */
             }
             
             .flex-container img {
@@ -140,7 +142,10 @@
             }
 
             /* MOBILE media queries*/
-            @media (max-width: 450px){
+            @media (max-width: 768px){
+                 .text {
+                    padding: 1em; /* or less for mobile */
+                  }
                 .container {
                     display: grid;
                     grid-template-columns: 1fr;
@@ -191,8 +196,8 @@
                 }
                
                 .flex-container img {
-                    width: min-content; /* Makes image responsive */
-                    height: auto; /* Maintains aspect ratio */
+                    max-width: 100%;
+                    height: auto;
                         
                 }
                 .countdown{
@@ -227,7 +232,6 @@
                             id = "homePhoto"
                             src="./photos/home.JPG" 
                             alt="A photo of Kayley grinning ear to ear"
-                            width="400" 
                             height="auto" 
                             >
                         <figcaption id = "caption">A photo of one of my favorite days with you :)</figcaption>
